@@ -144,16 +144,19 @@ textarea {
 /* ========================= */
 /* ======= FOOTER ========== */
 /* ========================= */
-footer {
+/* === FOOTER STYLES === */
+.footer {
     text-align: center;
     padding: 15px;
-    background: var(--secondary-color);
-    color: var(--footer-text-color);
+    background: #222; /* Dark background */
+    color: #fff; /* White text */
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
+    font-size: 14px;
 }
+
 
 /* ========================= */
 /* === RESPONSIVE DESIGN === */
