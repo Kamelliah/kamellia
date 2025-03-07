@@ -1,55 +1,27 @@
-/* === GLOBAL STYLES === */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    transition: background 0.3s, color 0.3s;
-    padding-top: 70px; /* Prevents content from being hidden behind navbar */
-}
-
-/* === LIGHT THEME - DEFAULT STYLES === */
-:root {
-    --background-color: #f5f5f5;
-    --navbar-color: #ffffff;
-    --text-color: #333333;
-    --accent-color: #007bff;
-    --border-color: #d1d5db;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-/* === DARK THEME - OVERRIDES === */
-.dark-theme {
-    --background-color: #121212;
-    --navbar-color: #1F1F1F;
-    --text-color: #E0E0E0;
-    --accent-color: #FF9800;
-}
-
-/* === NAVIGATION BAR STYLES === */
+/* === GENERAL NAVBAR STYLES === */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--navbar-color);
+    background: white; /* Adjust color as needed */
     padding: 15px 30px;
-    box-shadow: 0 2px 10px var(--shadow-color);
-    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-/* === Cursive Logo === */
+/* === LOGO STYLING === */
 .logo {
-    font-size: 28px;
-    font-family: 'Pacifico', cursive;
-    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
-/* === Navigation Links === */
+/* === NAVIGATION LINKS === */
 .nav-links {
     list-style: none;
     display: flex;
@@ -59,57 +31,72 @@ body {
 }
 
 .nav-links li {
-    display: inline;
+    display: inline-block;
 }
 
+/* === NAVIGATION LINKS STYLE === */
 .nav-links a {
     text-decoration: none;
     font-size: 18px;
-    color: var(--text-color);
-    transition: color 0.3s;
+    color: black;
+    transition: color 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
-}
-
-/* === Search Icon & Theme Toggle === */
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.search-icon {
-    font-size: 20px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.search-icon:hover {
-    opacity: 0.7;
-}
-
-#theme-toggle {
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    background: var(--accent-color);
     color: white;
-    border: none;
-    cursor: pointer;
+    background: blue; /* Change to your primary accent color */
 }
 
-/* === RESPONSIVE NAVIGATION FOR SMALLER SCREENS === */
+/* === ACTIVE PAGE HIGHLIGHT === */
+.nav-links .active {
+    font-weight: bold;
+    color: white;
+    background: blue;
+}
+
+/* === MOBILE RESPONSIVE MENU === */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+}
+
+/* === RESPONSIVE STYLES === */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 10px;
+        align-items: flex-start;
+        padding: 10px 20px;
     }
 
     .nav-links {
+        display: none;
         flex-direction: column;
         gap: 10px;
-        text-align: center;
+        text-align: left;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
