@@ -10,7 +10,8 @@
 
 body {
     background-color: #f5f5f5 !important;
-    color: #333 !important
+    color: #333 !important;
+    padding-top: 70px; /* Prevents content from being hidden behind navbar */
 }
 
 /* ========================= */
@@ -49,14 +50,15 @@ body {
 
 /* ========== CONTACT FORM ========== */
 .contact-form {
-    width: 45%; /* Reduced width for a more compact form */
+    width: 45%;
     background: var(--background-color);
-    padding: 15px; /* Reduced padding to bring input fields closer */
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--shadow-color);
     text-align: left;
 }
 
+/* Contact Form Heading */
 .contact-form h2 {
     text-align: center;
     margin-bottom: 5px;
@@ -66,17 +68,13 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-contact-form:last-of-type {
-    margin-bottom: 10px; /* Adds spacing below the entire last element */
-}
 
 /* Input Styling */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333; /* Darker for better readability */
-    font-weight: 600; /* Slightly bolder, but not too much */
+    color: #333;
 }
 
 input, textarea, select {
@@ -122,12 +120,12 @@ textarea {
 
 /* Adjust spacing between Sunday and Location */
 .location-info p:nth-last-of-type(2) {
-    margin-bottom: 10px; /* Ensures Sunday is closer to Saturday */
+    margin-bottom: 10px;
 }
 
 /* Reduce space between Monday - Sunday */
 .location-info p {
-    margin-bottom: 4px; /* Uniform spacing */
+    margin-bottom: 4px;
 }
 
 /* ========== MAP ========== */
@@ -144,12 +142,11 @@ textarea {
 /* ========================= */
 /* ======= FOOTER ========== */
 /* ========================= */
-/* === FOOTER STYLES === */
 .footer {
     text-align: center;
     padding: 15px;
-    background: #222; /* Dark background */
-    color: #fff; /* White text */
+    background: #222;
+    color: #fff;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -157,40 +154,10 @@ textarea {
     font-size: 14px;
 }
 
-
 /* ========================= */
 /* === RESPONSIVE DESIGN === */
 /* ========================= */
 @media (max-width: 768px) {
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: var(--secondary-color);
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        box-shadow: 0px 4px 10px var(--shadow-color);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
     .contact-content {
         flex-direction: column;
         align-items: center;
