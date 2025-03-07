@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamellia Hyacinth</title> 
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/new-index.css"> 
+    <link rel="stylesheet" href="css/navbar-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JavaScript to Load Navigation -->
+    <script defer src="js/nav-bar.js"></script> <!-- Ensure correct path -->
+</head>
+
+<body> 
+    <!-- 🔹 Navigation Placeholder -->
+    <div id="navbar-container"></div>
+
+    <!-- 🔹 Main Wrapper -->
+    <div class="container-wrapper">
+
+        <!-- 🔹 Upper Container (Profile & About Me) -->
+        <div class="upper-container">
+            <div class="profile-section">
+                <img src="https://raw.githubusercontent.com/Kamelliah/Kamellia-Hyacinth/main/IMG_3999.jpeg" 
+                     alt="Kamellia Hyacinth" 
+                     class="profile-img">
+                <h2>Kamellia Hyacinth</h2>
+                <p>MS-HCA Student <br>
+                    <a href="https://www.uwlax.edu">UW - La Crosse</a>
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="mailto:kamelliahyacinth@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/kamellia"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://us04web.zoom.us/j/7012830854"><i class="fa-solid fa-video"></i></a>
+                    <a href="https://www.uwlax.edu/faculty-senate/committees/faculty-committees/policy/#tm-25265"><i class="fa-solid fa-graduation-cap"></i></a>
+                    <a href="https://calendly.com/kamelliahyacinth/30min"><i class="fa-solid fa-calendar"></i></a>
+                </div>
+            </div>
+
+            <!-- 🔹 About Me & Details -->
+            <div class="about-me-section">
+                <h2>About Me</h2>
+                <p>Healthcare administration professional with a strong foundation in public health, health IT.
+                   Passionate about healthcare policy, operations, and technology-driven solutions to improve efficiency and patient outcomes.
+                   Focused on epidemiology, health advocacy, and regulatory compliance, with a keen interest in data-driven decision-making 
+                   and healthcare innovation. Background in military leadership fosters discipline, strategic thinking, and adaptability 
+                   in dynamic healthcare environments. Dedicated to leveraging technology, policy, 
+                   and operational strategies to contribute to healthcare transformation and public health initiatives.</p>
+
+                <!-- Download Resume -->
+                <p><i class="fa-solid fa-download"></i> 
+                    <a href="Kamellia_Hyacinth_Resume.pdf" class="resume-link"><span>Download my Résumé</span></a>
+                </p>
+
+                <!-- Interests & Education -->
+                <div class="info-section">
+                    <div class="interests">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-book"></i> Healthcare Policy & Advocacy</li>
+                            <li><i class="fa-solid fa-book"></i> Public Health & Community Wellness</li>
+                            <li><i class="fa-solid fa-book"></i> Patient-Centered Care</li>
+                            <li><i class="fa-solid fa-book"></i> Healthcare Data Analytics</li>
+                            <li><i class="fa-solid fa-book"></i> Strategic Planning & Leadership</li>
+                            <li><i class="fa-solid fa-book"></i> Population Health Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="education">
+                        <h3>Education</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-graduation-cap"></i> 
+                                <div class="degree-block">
+                                    <strong><span>MPH - 2027</span></strong>
+                                    <br>
+                                    <a href="https://www.wisc.edu">UW - Madison</a>
+                                </div>
+                            </li>
+                            <li><i class="fa-solid fa-graduation-cap"></i> 
+                                <div class="degree-block">
+                                    <strong><span>MHA - 2025</span></strong>
+                                    <br>
+                                    <a href="https://www.uwlax.edu">UW - La Crosse</a>
+                                </div>
+                            </li>
+                            <li><i class="fa-solid fa-graduation-cap"></i> 
+                                <div class="degree-block">
+                                    <strong><span>B.Sc. IT - 2015</span></strong>
+                                    <br>
+                                    <a href="https://www.sgu.edu">St. George’s University</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Photo Slider (Gallery) -->
+        <div class="slider-container">
+            <h2>Gallery</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="your-image-url1.jpg" alt="Event 1"></div>
+                    <div class="swiper-slide"><img src="your-image-url2.jpg" alt="Event 2"></div>
+                    <div class="swiper-slide"><img src="your-image-url3.jpg" alt="Event 3"></div>
+                    <div class="swiper-slide"><img src="your-image-url4.jpg" alt="Event 4"></div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔹 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
