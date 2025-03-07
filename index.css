@@ -1,0 +1,191 @@
+/* === MAIN WRAPPER === */
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically (if needed) */
+    width: 100%;
+    max-width: 900px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the container */
+    padding: 40px; /* Adjust spacing */
+}
+
+/* === UPPER CONTAINER: Profile & About Me === */
+/* Ensure profile & about section stay aligned */
+.upper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Keeps it balanced */
+    gap: 40px;
+}
+
+/* === PROFILE SECTION (Left Side) === */
+.profile-section {
+    flex: 1;
+    max-width: 250px; /* Matches the compact look */
+    text-align: center;
+}
+
+/* Profile image adjustments */
+.profile-img {
+    width: 110px; /* Reduce image size */
+    height: 110px;
+    border-radius: 50%;
+}
+
+.profile-section h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-section p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 6px;
+    color: var(--icon-color);
+    transition: color 0.3s;
+}
+
+.social-icons a i {
+    font-size: 14px; /* Shrink icons */
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* === ABOUT ME SECTION (Right Side) === */
+.about-me-section {
+    flex: 2;
+    max-width: 600px;
+    font-size: 14px;
+}
+
+.about-me-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.about-me-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.resume-link {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 500;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+}
+
+/* === INTERESTS & EDUCATION (Side-by-Side Layout) === */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.interests,
+.education {
+    width: 48%;
+}
+
+.interests h3,
+.education h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.interests ul,
+.education ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interests li,
+.education li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.interests li i,
+.education li i {
+    margin-right: 6px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* === EDUCATION DETAILS === */
+.edu-details strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.edu-details a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 14px;
+}
+
+.edu-details a:hover {
+    color: var(--link-hover-color);
+}
+
+/* === SLIDER CONTAINER (Gallery) === */
+/* Adjust gallery section */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* Swiper (Slider) */
+.swiper {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper slides */
+.swiper-slide img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primary-color);
+}
+
+/* Swiper pagination */
+.swiper-pagination-bullet {
+    background-color: var(--accent-color);
+}
