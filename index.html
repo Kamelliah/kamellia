@@ -11,16 +11,30 @@
     <link rel="stylesheet" href="footer-styles.css?v=1.1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- JavaScript to Load Navigation -->
-    <script defer src="nav-bar.js"></script>
 </head>
 
 <body> 
-    <!-- Navigation Bar -->
-    <div id="navbar-container"></div>
+    <!-- 🔹 Navigation Bar (Same as Contact Page) -->
+    <nav class="navbar">
+        <div class="navbar-title">Kamellia Hyacinth</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-icons">
+                <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <select id="theme-toggle">
+                    <option value="light">☀️ Light</option>
+                    <option value="auto">🌗 Auto</option>
+                    <option value="dark">🌙 Dark</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Main Wrapper -->
+    <!-- 🔹 Main Wrapper -->
     <div class="container-wrapper">
         <div class="upper-container">
             <div class="profile-section">
@@ -69,7 +83,7 @@
             </div>
         </div>
 
-        <!-- Gallery -->
+        <!-- 🔹 Gallery -->
         <div class="slider-container">
             <h2>Gallery</h2>
             <div class="swiper mySwiper">
@@ -84,12 +98,12 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 🔹 Footer -->
     <footer>
         <p>© 2025 Kamellia Hyacinth. All Rights Reserved.</p>
     </footer>
 
-    <!-- Swiper JS -->
+    <!-- 🔹 Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -100,7 +114,7 @@
         });
     </script>
 
-    <!-- 🔹 Theme Toggle JS (Added) -->
+    <!-- 🔹 Theme Toggle JS -->
     <script defer src="js/theme-toggle.js"></script>
 
 </body>
