@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="contact.css?v=1.1">
     <link rel="stylesheet" href="navbar-styles.css?v=1.1">
     <link rel="stylesheet" href="footer-styles.css">
+    
+    <!-- FontAwesome Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
+    <!-- 🔹 Navigation Bar -->
+    <nav class="navbar">
         <div class="navbar-title">Kamellia Hyacinth</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -20,10 +24,18 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
+            <li class="nav-icons">
+                <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <select id="theme-toggle">
+                    <option value="light">☀️ Light</option>
+                    <option value="auto">🌗 Auto</option>
+                    <option value="dark">🌙 Dark</option>
+                </select>
+            </li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Central Contact Section -->
+    <!-- 🔹 Contact Section -->
     <div class="contact-wrapper">
         <h2>Contact Me</h2>
         <p>Fill out the form below to get in touch.</p>
@@ -31,8 +43,9 @@
         <div class="contact-content">
             <!-- Contact Form -->
             <div class="contact-form">
-              <form action="https://formspree.io/f/xqapzbob" method="POST" enctype="multipart/form-data">
-                  <input type="hidden" name="_next" value="thankyou.html">
+                <form action="https://formspree.io/f/xqapzbob" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_next" value="thankyou.html">
+
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -83,7 +96,6 @@
                 <h3>Hours of Operation</h3>
                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                 <p>Saturday - Sunday: Closed</p>
-              
 
                 <h3>Location</h3>
                 <p>Fitchburg, Madison, WI 53713</p>
@@ -99,11 +111,15 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
+    <!-- 🔹 Footer -->
+    <footer class="footer">
         <p>© 2025 Kamellia Hyacinth. All Rights Reserved.</p>
     </footer>
 
+    <!-- 🔹 JavaScript -->
+    <script src="js/footer.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>
+
 
