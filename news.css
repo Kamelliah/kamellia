@@ -25,10 +25,12 @@ p {
 a {
     color: #fff;
 }
-
 #countdown {
-    max-width: 600px;
-    margin-top: 20px;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 #countdown ul {
@@ -40,79 +42,23 @@ a {
 }
 
 #countdown ul li {
-    flex: 25%;
-    padding: 5%;
+    flex: 1;
+    padding: 20px;
     margin: 0;
     list-style: none;
     background: #001f2f;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 8px rgba(0, 174, 255, 0.4);
 }
 
 #countdown ul li span {
     display: block;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
+    color: #00d4ff;
+    text-shadow: 2px 2px 5px rgba(0, 174, 255, 0.6);
 }
-
-
-.featured:hover {
-    transform: scale(1.05);
-}
-
-/* Countdown Timer Section - Matching Desired Design */
-.countdown-container {
-    background: url('https://source.unsplash.com/random/1600x900?night-sky,stars') no-repeat center center/cover;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 16px rgba(0, 174, 255, 0.5);
-    text-align: center;
-    font-size: 28px;
-    position: relative;
-}
-
-.countdown-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-}
-
-.countdown-header {
-    position: relative;
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    margin-bottom: 20px;
-}
-
-#countdown {
-    position: relative;
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    color: #ffffff;
-}
-
-.countdown-box {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px 30px;
-    border-radius: 12px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 174, 255, 0.4);
-    backdrop-filter: blur(10px);
-    color: white;
-    text-transform: uppercase;
 }
 
 @keyframes pulse {
