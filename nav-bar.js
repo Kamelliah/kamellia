@@ -1,54 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("nav-bar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navbar-container").innerHTML = data;
+    const themeButton = document.querySelector(".theme-button");
+    const themeDropdown = document.querySelector(".theme-dropdown");
+    const themeOptions = document.querySelectorAll(".theme-option");
 
-            // Mobile menu functionality
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
-
-            if (hamburger && navLinks) {
-                hamburger.addEventListener("click", () => {
-                    navLinks.classList.toggle("active");
-                });
+    function applyTheme(theme) {
+        document.body.classList.remove("dark-theme");
+        if (theme === "dark") {
+            document.body.classList.add("dark-theme");
+        } else if (theme === "auto") {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.body.classList.add("dark-theme");
             }
+        }
+        localStorage.setItem("theme", theme);
+    }
 
-            // Theme Toggle Functionality
-            const themeToggle = document.querySelector(".theme-toggle i");
-            let currentTheme = localStorage.getItem("theme") || "auto";
+    // Load saved theme on page load
+    const savedTheme = localStorage.getItem("theme") || "auto";
+    applyTheme(savedTheme);
 
-            function applyTheme(theme) {
-                document.body.classList.remove("light-theme", "dark-theme");
+    // Open/Close Dropdown on Click
+    themeButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        themeDropdown.classList.toggle("active");
+    });
 
-                if (theme === "dark") {
-                    document.body.classList.add("dark-theme");
-                    themeToggle.classList.replace("fa-moon", "fa-sun");
-                } else if (theme === "light") {
-                    document.body.classList.add("light-theme");
-                    themeToggle.classList.replace("fa-sun", "fa-moon");
-                } else {
-                    // Auto mode - Detect system preference
-                    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-                    document.body.classList.add(prefersDark ? "dark-theme" : "light-theme");
-                    themeToggle.classList.replace(prefersDark ? "fa-moon" : "fa-sun", prefersDark ? "fa-sun" : "fa-moon");
-                }
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!themeDropdown.contains(e.target)) {
+            themeDropdown.classList.remove("active");
+        }
+    });
 
-                localStorage.setItem("theme", theme);
-            }
-
-            applyTheme(currentTheme);
-
-            themeToggle.addEventListener("click", function () {
-                if (currentTheme === "light") {
-                    currentTheme = "dark";
-                } else if (currentTheme === "dark") {
-                    currentTheme = "auto";
-                } else {
-                    currentTheme = "light";
-                }
-                applyTheme(currentTheme);
-            });
-        })
-        .catch(error => console.error("Error loading navigation:", error));
+    // Handle Theme Selection
+    themeOptions.forEach(option => {
+        option.addEventListener("click", () => {
+            const selectedTheme = option.getAttribute("data-theme");
+            applyTheme(selectedTheme);
+            themeDropdown.classList.remove("active"); // Close menu after selection
+        });
+    });
 });
