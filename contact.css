@@ -1,10 +1,11 @@
+/* ========================= */
 /* == GENERAL RESET & BODY == */
 /* ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Ensures consistent font */
+    font-family: Arial, sans-serif;
 }
 
 /* ========================= */
@@ -19,61 +20,57 @@
     box-shadow: 0 4px 6px var(--border-color);
 }
 
-.contact-form {
-    margin-right: 0; /* Remove unnecessary spacing */
-}
-
-.contact-info {
-    margin-left: 0; /* Remove unnecessary spacing */
-}
+/* 🔹 Contact Section: Form & Info */
 .contact-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 5px; /* Reduce further */
-    max-width: 850px; /* Restrict max width */
-    margin: 0 auto; /* Center in container */
+    gap: 10px; /* Reduced gap for better alignment */
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-/* Contact Form - Align Left */
+/* === CONTACT FORM (Left Side) === */
 .contact-form {
-    width: 40%; /* Adjust width */
+    width: 40%;
     max-width: 450px;
     background: var(--navbar-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--border-color);
     text-align: left;
+    margin-right: 5px;
 }
 
-/* Center Contact Me Title & Description */
+/* Center "Contact Me" Title & Description */
 .contact-form h2,
 .contact-form p {
     text-align: center;
 }
+
 .contact-form p {
-    margin-bottom: 25px; /* Increase space slightly */
+    margin-bottom: 25px;
     padding-bottom: 8px;
     display: block;
-
 }
 
+/* Space Above "Full Name" */
 .contact-form .form-group:first-of-type {
-    margin-top: 10px; /* Adds subtle spacing above "Full Name" */
+    margin-top: 10px;
 }
 
-
-/* Additional Info (Hours & Map) - Align Right */
+/* === CONTACT INFO (Right Side) === */
 .contact-info {
-    width: 40%; /* Adjust width */
+    width: 40%;
     max-width: 350px;
     background: var(--navbar-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--border-color);
+    margin-left: 5px;
 }
 
-/* Headings for the info box */
+/* === HEADINGS & PARAGRAPHS === */
 .contact-info h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -84,15 +81,13 @@
     line-height: 1.5;
 }
 
-
-/* ✅ Fixed label spacing */
+/* === FORM INPUTS === */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* ✅ Unified input styles */
 input, textarea, select {
     width: 100%;
     padding: 8px;
@@ -101,7 +96,7 @@ input, textarea, select {
     background: var(--navbar-color);
 }
 
-/* ✅ Button improvements */
+/* === BUTTONS === */
 .submit-btn {
     background: var(--button-bg);
     color: var(--text-color);
@@ -143,15 +138,14 @@ input, textarea, select {
     font-size: 14px;
     margin-bottom: 5px;
 }
-/* 🔹 Add "Location" Title Above Map */
+
+/* === LOCATION & MAP === */
 .location-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* === MAP CONTAINER === */
-/* 🔹 Map Container */
 .map-container {
     width: 100%;
     border-radius: 8px;
@@ -164,7 +158,9 @@ input, textarea, select {
     border-radius: 5px;
 }
 
-/* Responsive Design */
+/* ========================= */
+/* === RESPONSIVE DESIGN === */
+/* ========================= */
 @media (max-width: 768px) {
     .contact-content {
         flex-direction: column;
@@ -177,4 +173,5 @@ input, textarea, select {
         max-width: 100%;
     }
 }
+
 
