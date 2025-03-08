@@ -5,28 +5,27 @@ body {
     padding: 20px;
     background-color: #121212;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
+    width: 100%;
+    max-width: 1300px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 40px;
 }
 
-.main-content {
+.section {
     background: #1e1e1e;
-    padding: 30px;
-    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-}
-
-.sidebar {
-    background: #232323;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    box-shadow: 0px 6px 16px rgba(0, 174, 255, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
 }
 
 h1, h2 {
@@ -36,24 +35,14 @@ h1, h2 {
     text-transform: uppercase;
 }
 
-/* Featured Announcements - Centered */
-.featured-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
+/* Featured Announcements */
 .featured {
     background: linear-gradient(90deg, #0056b3, #00aaff);
     color: white;
-    padding: 25px;
-    text-align: center;
-    font-size: 20px;
+    padding: 30px;
+    font-size: 22px;
     border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0px 4px 12px rgba(0, 174, 255, 0.4);
+    box-shadow: 0px 6px 16px rgba(0, 174, 255, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -64,15 +53,15 @@ h1, h2 {
 /* Countdown Timer Section */
 .countdown-container {
     background: #1e1e1e;
-    padding: 25px;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 174, 255, 0.4);
+    box-shadow: 0px 6px 16px rgba(0, 174, 255, 0.3);
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 26px;
 }
 
 #countdown {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -83,12 +72,12 @@ h1, h2 {
 .countdown-box {
     background: #00aaff;
     color: white;
-    padding: 16px 24px;
+    padding: 20px 28px;
     border-radius: 12px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     animation: pulse 1.5s infinite alternate;
-    box-shadow: 0px 3px 8px rgba(0, 174, 255, 0.4);
+    box-shadow: 0px 4px 12px rgba(0, 174, 255, 0.4);
 }
 
 @keyframes pulse {
@@ -99,17 +88,16 @@ h1, h2 {
 /* Timeline Section */
 .timeline {
     border-left: 4px solid #00aaff;
-    padding-left: 30px;
+    padding-left: 40px;
     margin-left: 20px;
 }
 
 .timeline-item {
-    margin-bottom: 30px;
-    transition: background 0.3s, transform 0.3s;
-    padding: 15px;
-    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 12px;
     background: #232323;
-    box-shadow: 0px 2px 8px rgba(0, 174, 255, 0.2);
+    box-shadow: 0px 3px 10px rgba(0, 174, 255, 0.2);
 }
 
 .timeline-item:hover {
@@ -119,18 +107,18 @@ h1, h2 {
 
 /* News Section */
 .news-section {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .news-item {
     background: #232323;
-    padding: 22px;
-    margin-bottom: 18px;
-    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
     border-left: 6px solid #00aaff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 3px 10px rgba(0, 174, 255, 0.3);
+    box-shadow: 0px 4px 12px rgba(0, 174, 255, 0.3);
 }
 
 .news-item:hover {
@@ -139,20 +127,7 @@ h1, h2 {
 
 .news-content {
     display: none;
-    padding-top: 10px;
-}
-
-/* Sidebar Enhancements */
-.sidebar-section {
-    margin-bottom: 25px;
-}
-
-.sidebar-section h3 {
-    color: #00aaff;
-    font-weight: 600;
-    border-bottom: 2px solid #00aaff;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    padding-top: 15px;
 }
 
 /* Dark Mode Enhancements */
@@ -161,9 +136,8 @@ h1, h2 {
     color: white;
 }
 
-.dark-mode .main-content {
+.dark-mode .section {
     background-color: #1e1e1e;
-    color: white;
 }
 
 .dark-mode .featured {
@@ -183,7 +157,6 @@ h1, h2 {
 .dark-mode .countdown-container {
     background: #1e1e1e;
     color: white;
-    box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.1);
 }
 
 .dark-mode #countdown {
