@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    /** =========================
+     *  🔹 THEME TOGGLE FUNCTIONALITY (Time-Based + Manual Selection)
+     *  ========================= */
     const themeButton = document.querySelector(".theme-button");
     const themeDropdown = document.querySelector(".theme-dropdown");
     const themeOptions = document.querySelectorAll(".theme-option");
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme") || "auto";
     applyTheme(savedTheme);
 
-    // Open/Close Dropdown on Click
+    // Open/Close Theme Dropdown
     themeButton.addEventListener("click", (e) => {
         e.stopPropagation();
         themeDropdown.classList.toggle("active");
@@ -55,4 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
             applyTheme("auto");
         }
     }, 60000); // Check every 60 seconds
+
+
+    /** =========================
+     *  🔹 NAVBAR FUNCTIONALITY (Mobile Menu)
+     *  ========================= */
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (hamburger) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
 });
