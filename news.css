@@ -8,22 +8,23 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
+    padding-top: 60px;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     margin-bottom: 5px;
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 400;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 a {
@@ -33,12 +34,12 @@ a {
 }
 
 #countdown {
-    max-width: 450px;
+    max-width: 350px;
     background: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
 }
 
 #countdown ul {
@@ -51,19 +52,19 @@ a {
 
 #countdown ul li {
     flex: 1;
-    padding: 10px;
+    padding: 6px;
     list-style: none;
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 6px;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: 0px 3px 8px rgba(0, 174, 255, 0.4);
+    box-shadow: 0px 2px 5px rgba(0, 174, 255, 0.4);
     font-family: 'Poppins', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 #countdown ul li span {
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #00d4ff;
     text-shadow: 2px 2px 5px rgba(0, 174, 255, 0.6);
@@ -71,58 +72,58 @@ a {
     text-transform: uppercase;
 }
 
-/* Three-Column Layout Under Countdown */
-.three-column-container {
+/* Three-Column Layout */
+.main-content-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    max-width: 750px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    max-width: 900px;
     width: 100%;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.three-column-box {
+.content-box {
     background: rgba(0, 0, 0, 0.8);
-    padding: 8px;
-    border-radius: 6px;
+    padding: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #00d4ff;
-    box-shadow: 0px 3px 6px rgba(0, 174, 255, 0.4);
+    box-shadow: 0px 2px 5px rgba(0, 174, 255, 0.4);
     transition: background 0.3s;
 }
 
-.three-column-box:hover {
+.content-box:hover {
     background: rgba(0, 0, 0, 1);
 }
 
 .content {
     display: none;
-    padding: 8px;
+    padding: 6px;
     background: rgba(0, 0, 0, 0.6);
-    border-radius: 6px;
-    margin-top: 4px;
-    font-size: 0.8rem;
+    border-radius: 5px;
+    margin-top: 3px;
+    font-size: 0.6rem;
 }
 
 /* Timeline Styling */
 .timeline {
     border-left: 2px solid #00d4ff;
-    padding-left: 15px;
-    margin: 15px 0;
-    max-width: 500px;
+    padding-left: 10px;
+    margin: 8px 0;
+    max-width: 300px;
 }
 
 .timeline-item {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 6px;
+    padding: 5px;
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 6px;
-    box-shadow: 0px 3px 6px rgba(0, 174, 255, 0.4);
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 174, 255, 0.4);
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .timeline-item:hover {
@@ -131,7 +132,49 @@ a {
 
 .timeline-content {
     display: none;
-    padding-top: 4px;
-    font-size: 0.8rem;
+    padding-top: 3px;
+    font-size: 0.6rem;
 }
+
+/* Detailed News Section */
+.news-container {
+    max-width: 300px;
+}
+
+.news-item {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6rem;
+    color: #00d4ff;
+    box-shadow: 0px 2px 4px rgba(0, 174, 255, 0.4);
+    transition: background 0.3s;
+    margin-bottom: 4px;
+}
+
+.news-item:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.news-content {
+    display: none;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    margin-top: 3px;
+    font-size: 0.6rem;
+}
+
+/* Quick Facts Section */
+.quick-facts-container {
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    color: #00d4ff;
+    box-shadow: 0px 2px 4px rgba(0, 174, 255, 0.4);
+}
+
 
