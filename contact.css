@@ -20,6 +20,18 @@
     text-align: center;
 }
 
+/* Ensure the form has a proper max width */
+.contact-form {
+    width: 100%; /* Prevent it from stretching too much */
+    max-width: 450px; /* Set a reasonable max width */
+    margin: 0 auto; /* Centers the form */
+    background: var(--navbar-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--border-color);
+    text-align: left;
+}
+
 /* Center the title and description inside the form */
 .contact-form h2,
 .contact-form p {
@@ -48,14 +60,6 @@
     align-items: center;
 }
 
-/* ✅ Simplified `.contact-form` to avoid overriding */
-.contact-form {
-    width: 100%; /* Full width inside .contact-wrapper */
-    max-width: 500px; /* Keep form responsive */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left;
-}
 
 /* ✅ Fixed label spacing */
 label {
