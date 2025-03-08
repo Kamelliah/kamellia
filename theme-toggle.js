@@ -65,9 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 60000); // Check every 60 seconds
 
     /** =========================
- *  🔹 MOBILE NAVBAR FUNCTIONALITY
- *  ========================= */
-document.addEventListener("DOMContentLoaded", function () {
+     *  🔹 MOBILE NAVBAR FUNCTIONALITY
+     *  ========================= */
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
@@ -86,5 +85,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-    
