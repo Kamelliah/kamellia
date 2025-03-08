@@ -13,8 +13,132 @@
 </head>
 
 <body>
-    <!-- 🔹 Navbar Placeholder -->
-    <div id="navbar-container"></div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamellia Hyacinth</title> 
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="index.css?v=1.1">
+    <link rel="stylesheet" href="navbar-styles.css?v=1.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body> 
+    
+    <nav class="navbar">
+    <div class="navbar-title">Kamellia Hyacinth</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+    </ul>
+
+    <!-- 🔹 Theme & Search -->
+    <div class="nav-icons">
+        <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="theme-dropdown">
+            <button class="theme-button">🌙 Theme</button>
+            <div class="theme-menu">
+                <div class="theme-option" data-theme="light">☀️ Light Mode</div>
+                <div class="theme-option" data-theme="auto">🔄 Auto Mode</div>
+                <div class="theme-option" data-theme="dark">🌑 Dark Mode</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- 🔹 Main Wrapper -->
+    <div class="container-wrapper">
+        <div class="upper-container">
+            <div class="profile-section">
+                <img src="https://raw.githubusercontent.com/Kamelliah/kamellia/main/IMG_3999.jpeg" 
+                     alt="Kamellia Hyacinth" 
+                     class="profile-img">
+                <h2>Kamellia Hyacinth</h2>
+                <p>MS-HCA Student <br>
+                    <a href="https://www.uwlax.edu">UW - La Crosse</a>
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="mailto:kamelliahyacinth@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/kamellia"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://us04web.zoom.us/j/7012830854"><i class="fa-solid fa-video"></i></a>
+                    <a href="https://calendly.com/kamelliahyacinth/30min"><i class="fa-solid fa-calendar"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-me-section">
+            <h2>About Me</h2>
+            <p>Healthcare administration professional with a strong foundation in public health, health IT...</p>
+
+            <p><i class="fa-solid fa-download"></i> 
+                <a href="Kamellia_Hyacinth_Resume.pdf" class="resume-link">Download my Résumé</a>
+            </p>
+
+            <div class="info-section">
+                <div class="interests">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-book"></i> Healthcare Policy & Advocacy</li>
+                        <li><i class="fa-solid fa-book"></i> Public Health & Community Wellness</li>
+                    </ul>
+                </div>
+
+                <div class="education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-graduation-cap"></i> <a href="https://www.wisc.edu">UW - Madison (MPH 2027)</a></li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> <a href="https://www.uwlax.edu">UW - La Crosse (MHA 2025)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Gallery -->
+        <div class="slider-container">
+            <h2>Gallery</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="your-image-url1.jpg" alt="Event 1"></div>
+                    <div class="swiper-slide"><img src="your-image-url2.jpg" alt="Event 2"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div> <!-- ✅ Closing container-wrapper div here -->
+
+    <!-- 🔹 Footer -->
+    <footer class="footer">
+        <p>© 2025 Kamellia Hyacinth. All Rights Reserved.</p>
+    </footer>
+
+    <!-- 🔹 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+    </script>
+
+    <!-- 🔹 Main JS -->
+    <script defer src="js/theme-toggle.js"></script>
+</body>
+</html>
+
 
     <!-- 🔹 Contact Section -->
     <div class="contact-wrapper">
