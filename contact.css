@@ -19,11 +19,20 @@
     box-shadow: 0 4px 6px var(--border-color);
 }
 
+.contact-form {
+    margin-right: 0; /* Remove unnecessary spacing */
+}
+
+.contact-info {
+    margin-left: 0; /* Remove unnecessary spacing */
+}
 .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px; /* Reduce even more */
+    gap: 5px; /* Reduce further */
+    max-width: 850px; /* Restrict max width */
+    margin: 0 auto; /* Center in container */
 }
 
 /* Contact Form - Align Left */
