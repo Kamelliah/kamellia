@@ -20,12 +20,14 @@
     text-align: center;
 }
 
-/* Center only the "Contact Me" and description */
+/* Center the title and description inside the form */
 .contact-form h2,
 .contact-form p {
-    text-align: center; /* ✅ Center only these elements */
-    width: 100%; /* Ensures full width */
-    margin: 0 auto 15px; /* Keeps spacing */
+    text-align: center;
+    display: block;
+    margin: 0 auto 15px;
+    width: 100%;
+
 }
 
 /* ⛔ Removed redundant styles from `.contact-wrapper` */
