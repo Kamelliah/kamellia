@@ -32,13 +32,12 @@
     text-align: left;
 }
 
-/* Center the title and description inside the form */
+/* Center only the title & description inside the form */
 .contact-form h2,
 .contact-form p {
     text-align: center;
-    display: block;
-    margin: 0 auto 15px;
     width: 100%;
+    margin-bottom: 15px;
 
 }
 
