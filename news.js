@@ -1,32 +1,34 @@
-function updateCountdown() {
-    const graduationDate = new Date("May 17, 2025 00:00:00").getTime();
-    const now = new Date().getTime();
-    const timeLeft = graduationDate - now;
+document.addEventListener("DOMContentLoaded", function () {
+  const sec = 1000,
+        min = sec * 60,
+        hour = min * 60,
+        day = hour * 24;
 
-    if (timeLeft <= 0) {
-        document.getElementById("countdown").innerHTML = "🎓 Congratulations! You Graduated!";
-        document.getElementById("countdown").style.color = "green";
-        return;
+  const end = new Date("May 17, 2025 00:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const remaining = end - now;
+
+    if (remaining <= 0) {
+      document.querySelector("h1").innerText = "🎓 Congratulations! You've Graduated! 🎉";
+      document.querySelector("p").innerHTML = "The big day is here! Visit <a href='#'>your portfolio</a> for more details.";
+      
+      const digits = document.querySelectorAll("span");
+      digits.forEach((digit) => {
+        digit.innerText = "00";
+      });
+
+      clearInterval(countdownInterval);
+      return;
     }
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    document.getElementById("days").innerText = Math.floor(remaining / day);
+    document.getElementById("hours").innerText = Math.floor((remaining % day) / hour);
+    document.getElementById("minutes").innerText = Math.floor((remaining % hour) / min);
+    document.getElementById("seconds").innerText = Math.floor((remaining % min) / sec);
+  }
 
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    requestAnimationFrame(updateCountdown);
-}
-
-updateCountdown();
-
-function toggleNews(element) {
-    let content = element.querySelector(".news-content");
-    content.style.display = content.style.display === "none" || content.style.display === "" ? "block" : "none";
-}
-
-function toggleSidebar() {
-    let sidebar = document.getElementById("sidebar");
-    sidebar.style.display = sidebar.style.display === "none" || sidebar.style.display === "" ? "block" : "none";
-}
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+});
