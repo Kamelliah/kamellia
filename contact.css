@@ -42,11 +42,16 @@
 .contact-form p {
     text-align: center;
 }
-
 .contact-form p {
-    margin-bottom: 15px; /* Adjust spacing */
+    margin-bottom: 20px; /* Slightly increase spacing */
+    padding-bottom: 5px; /* Add a bit more space */
     display: block;
 }
+
+.contact-form .form-group:first-of-type {
+    margin-top: 10px; /* Adds subtle spacing above "Full Name" */
+}
+
 
 /* Additional Info (Hours & Map) - Align Right */
 .contact-info {
