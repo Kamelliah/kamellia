@@ -17,14 +17,20 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--border-color);
-    text-align: center;
 }
 
-/* Ensure the form has a proper max width */
+/* Flexbox Layout for Contact Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Adds spacing between form & additional info */
+}
+
+/* Contact Form - Align Left */
 .contact-form {
-    width: 100%; /* Prevent it from stretching too much */
-    max-width: 450px; /* Set a reasonable max width */
-    margin: 0 auto; /* Centers the form */
+    width: 55%; /* Adjust width */
+    max-width: 450px;
     background: var(--navbar-color);
     padding: 20px;
     border-radius: 8px;
@@ -32,31 +38,31 @@
     text-align: left;
 }
 
-/* Center only the title & description inside the form */
+/* Center Contact Me Title & Description */
 .contact-form h2,
 .contact-form p {
     text-align: center;
-    width: 100%;
-    margin-bottom: 15px;
-
 }
 
-/* ⛔ Removed redundant styles from `.contact-wrapper` */
-.contact-wrapper h2 {
-    font-size: 26px;
+/* Additional Info (Hours & Map) - Align Right */
+.contact-info {
+    width: 40%; /* Adjust width */
+    max-width: 350px;
+    background: var(--navbar-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--border-color);
+}
+
+/* Headings for the info box */
+.contact-info h3 {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
-.contact-wrapper p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* ✅ Keeps the form organized */
-.contact-content {
-    display: flex;
-    justify-content: center; /* Center form */
-    align-items: center;
+.contact-info p {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 
@@ -92,5 +98,28 @@ input, textarea, select {
 
 .submit-btn:hover {
     background: var(--hover-color);
+}
+
+
+/* Map Styling */
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
