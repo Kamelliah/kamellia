@@ -176,7 +176,7 @@ body {
 }
 /* === HAMBURGER MENU BUTTON === */
 .hamburger {
-    display: none; /* Hidden on larger screens */
+    display: none; /* Hidden on large screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -199,12 +199,12 @@ body {
 
 /* === MOBILE NAVIGATION MENU === */
 @media (max-width: 768px) {
-    /* Show hamburger on mobile */
+    /* Show hamburger icon on mobile */
     .hamburger {
         display: flex;
     }
 
-    /* Ensure navbar stays row-based */
+    /* Ensure the navbar stays row-based */
     .navbar {
         display: flex;
         flex-direction: row;
@@ -220,17 +220,17 @@ body {
         z-index: 1000;
     }
 
-    /* Navigation menu styles */
+    /* Mobile Navigation Menu */
     .nav-links {
         flex-direction: column;
-        display: none; /* Initially hidden */
+        display: none; /* Hidden by default */
         position: absolute;
-        top: 100%; /* Ensures it appears directly below the navbar */
-        left: 0;
-        width: 100%;
+        top: 100%; /* Ensure it appears below the navbar */
+        left: 0; /* Align to the left */
+        width: 250px; /* Set width for better alignment */
         background: var(--navbar-color);
         padding: 10px 0;
-        box-shadow: 0px 4px 10px var(--border-color);
+        box-shadow: 2px 4px 10px var(--border-color);
         z-index: 999;
     }
 
@@ -239,7 +239,7 @@ body {
         display: flex;
     }
 
-    /* Style navigation items */
+    /* Align menu items properly */
     .nav-links li {
         width: 100%;
         text-align: left;
@@ -252,27 +252,4 @@ body {
         width: 100%;
         text-align: left;
         font-size: 18px;
-        padding: 12px 20px;
-        color: var(--text-color);
-        text-decoration: none;
-        transition: background 0.3s;
-    }
-
-    .nav-links a:hover {
-        background: var(--hover-color);
-        color: white;
-    }
-}
-
-/* === HAMBURGER ANIMATION (X Toggle) === */
-.hamburger.active div:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active div:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
+        padding:
