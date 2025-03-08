@@ -29,7 +29,7 @@
 
 /* Contact Form - Align Left */
 .contact-form {
-    width: 55%; /* Adjust width */
+    width: 40%; /* Adjust width */
     max-width: 450px;
     background: var(--navbar-color);
     padding: 20px;
