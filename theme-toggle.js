@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Load navbar dynamically
-    fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navbar-container").innerHTML = data;
-        })
-        .catch(error => console.error("Error loading navbar:", error));
-
     /** =========================
      *  🔹 THEME TOGGLE FUNCTIONALITY (Time-Based + Manual Selection)
      *  ========================= */
@@ -71,9 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
-    if (hamburger) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
     }
 });
+
