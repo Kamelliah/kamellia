@@ -1,5 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     /** =========================
+     *  🔹 NAVBAR LOADING FUNCTIONALITY
+     *  ========================= */
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+
+            // Highlight active link in navbar
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add("active");
+                }
+            });
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+
+    /** =========================
      *  🔹 THEME TOGGLE FUNCTIONALITY (Time-Based + Manual Selection)
      *  ========================= */
     const themeButton = document.querySelector(".theme-button");
@@ -65,17 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 60000); // Check every 60 seconds
 
-
     /** =========================
      *  🔹 NAVBAR FUNCTIONALITY (Mobile Menu)
      *  ========================= */
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+    document.addEventListener("click", function (e) {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
-    if (hamburger) {
-        hamburger.addEventListener("click", () => {
+        if (hamburger && navLinks && e.target === hamburger) {
             navLinks.classList.toggle("active");
-        });
-    }
+        }
+    });
 });
+
 
