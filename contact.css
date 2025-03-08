@@ -20,12 +20,14 @@
     text-align: center;
 }
 
+/* ✅ This ensures "Contact Me" is inside the form */
 .contact-form h2,
 .contact-form p {
     text-align: center;
     margin-bottom: 15px;
 }
 
+/* ⛔ Removed redundant styles from `.contact-wrapper` */
 .contact-wrapper h2 {
     font-size: 26px;
     margin-bottom: 10px;
@@ -36,36 +38,39 @@
     margin-bottom: 20px;
 }
 
+/* ✅ Keeps the form organized */
 .contact-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
+    justify-content: center; /* Center form */
+    align-items: center;
 }
 
+/* ✅ Simplified `.contact-form` to avoid overriding */
 .contact-form {
-    width: 45%;
-    background: var(--navbar-color);
-    padding: 15px;
+    width: 100%; /* Full width inside .contact-wrapper */
+    max-width: 500px; /* Keep form responsive */
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px var(--border-color);
     text-align: left;
 }
 
+/* ✅ Fixed label spacing */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* ✅ Unified input styles */
 input, textarea, select {
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     background: var(--navbar-color);
 }
 
+/* ✅ Button improvements */
 .submit-btn {
     background: var(--button-bg);
     color: var(--text-color);
@@ -82,3 +87,4 @@ input, textarea, select {
 .submit-btn:hover {
     background: var(--hover-color);
 }
+
