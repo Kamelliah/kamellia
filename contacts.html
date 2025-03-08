@@ -30,14 +30,20 @@
             <li><a href="news.html">News</a></li>
             <li><a href="contacts.html" class="active">Contact</a></li>
         </ul>
-        <div class="nav-icons">
-            <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <select id="theme-toggle">
-                <option value="light">☀️ Light</option>
-                <option value="auto">🌗 Auto</option>
-                <option value="dark">🌙 Dark</option>
-            </select>
+        <li class="nav-icons">
+    <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+    <!-- Theme Toggle Dropdown -->
+    <div class="theme-dropdown">
+        <button class="theme-button">🌙 Theme</button>
+        <div class="theme-menu">
+            <div class="theme-option" data-theme="light">☀️ Light Mode</div>
+            <div class="theme-option" data-theme="auto">🔄 Auto Mode</div>
+            <div class="theme-option" data-theme="dark">🌑 Dark Mode</div>
         </div>
+    </div>
+</li>
+        
     </nav>
 
     <!-- 🔹 Contact Section -->
