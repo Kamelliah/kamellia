@@ -8,16 +8,16 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
 }
 
 .main-content {
     background: white;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
@@ -35,22 +35,30 @@ h1, h2 {
     font-weight: 600;
 }
 
-/* Featured Announcements */
+/* Featured Announcements - Centered */
+.featured-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .featured {
     background: linear-gradient(90deg, #004aad, #0073e6);
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     font-size: 18px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Countdown Timer Section */
+/* Countdown Timer Section - More Space */
 .countdown-container {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -58,7 +66,7 @@ h1, h2 {
 }
 
 #countdown {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -69,9 +77,9 @@ h1, h2 {
 .countdown-box {
     background: #0073e6;
     color: white;
-    padding: 12px 18px;
+    padding: 14px 22px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     animation: pulse 1.5s infinite alternate;
 }
@@ -81,17 +89,17 @@ h1, h2 {
     to { transform: scale(1.1); }
 }
 
-/* Timeline Section */
+/* Timeline Section - Better Spacing */
 .timeline {
     border-left: 4px solid #0073e6;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-left: 20px;
 }
 
 .timeline-item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     transition: background 0.3s, transform 0.3s;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
 }
 
@@ -100,16 +108,16 @@ h1, h2 {
     transform: translateX(5px);
 }
 
-/* News Section */
+/* News Section - More Spacing */
 .news-section {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .news-item {
     background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
     border-left: 5px solid #0073e6;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -138,7 +146,7 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
-/* Dark Mode Toggle */
+/* Dark Mode Enhancements */
 .dark-mode {
     background-color: #121212;
     color: white;
