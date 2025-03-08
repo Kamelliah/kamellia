@@ -11,24 +11,24 @@ body {
 
 /* === LIGHT THEME === */
 :root {
-    --background-color: #F4F7FC;   /* Soft White Blue */
-    --navbar-color: #FFFFFF;       /* Clean White */
-    --text-color: #2A3D66;         /* Deep Navy Blue */
-    --accent-color: #0056B3;       /* Royal Blue */
-    --button-bg: #3A73B7;          /* Elegant Sky Blue */
-    --hover-color: #1E4A86;        /* Darker Royal Blue */
-    --border-color: #D1D9E6;       /* Soft Cool Gray */
+    --background-color: #F4F7FC;
+    --navbar-color: #FFFFFF;
+    --text-color: #2A3D66;
+    --accent-color: #0056B3;
+    --button-bg: #3A73B7;
+    --hover-color: #1E4A86;
+    --border-color: #D1D9E6;
 }
 
 /* === DARK THEME === */
 .dark-theme {
-    --background-color: #121C2B;   /* Midnight Navy */
-    --navbar-color: #1A253B;       /* Dark Blue Gray */
-    --text-color: #E0E6F0;         /* Soft White-Blue */
-    --accent-color: #3E72B3;       /* Refined Sapphire Blue */
-    --button-bg: #1E4A86;          /* Deep Royal Blue */
-    --hover-color: #82A4D9;        /* Light Metallic Blue */
-    --border-color: #2C3D5A;       /* Elegant Blue Gray */
+    --background-color: #121C2B;
+    --navbar-color: #1A253B;
+    --text-color: #E0E6F0;
+    --accent-color: #3E72B3;
+    --button-bg: #1E4A86;
+    --hover-color: #82A4D9;
+    --border-color: #2C3D5A;
 }
 
 /* === NAVBAR STYLES === */
@@ -46,7 +46,7 @@ body {
     z-index: 1000;
 }
 
-/* === Navigation Links === */
+/* === NAVIGATION LINKS === */
 .nav-links {
     list-style: none;
     display: flex;
@@ -67,11 +67,18 @@ body {
     color: var(--accent-color);
 }
 
-/* === Search Icon & Theme Toggle === */
-.nav-icons {
+/* === NAVBAR RIGHT SIDE: SEARCH & THEME === */
+.nav-right {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+/* === SEARCH CONTAINER === */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-icon {
@@ -84,12 +91,12 @@ body {
     opacity: 0.7;
 }
 
-/* === THEME DROPDOWN === */
+/* === THEME DROPDOWN CONTAINER === */
 .theme-dropdown {
     position: relative;
     display: inline-block;
     text-align: center;
-    z-index: 1100; /* Ensures it's above other elements */
+    z-index: 2000;
 }
 
 /* Theme Button */
@@ -108,25 +115,33 @@ body {
     background: var(--hover-color);
 }
 
-/* Dropdown Menu */
+/* Theme Dropdown Menu */
 .theme-menu {
     display: none;
     position: absolute;
     right: 0;
     background: var(--navbar-color);
-    box-shadow: 0 2px 5px var(--border-color);
+    box-shadow: 0 4px 8px var(--border-color);
     border-radius: 5px;
     overflow: hidden;
     min-width: 180px;
-    z-index: 1200;
+    z-index: 2200;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: opacity 0.2s ease-in-out, visibility 0.2s, transform 0.2s;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* Show dropdown when active */
+/* Show dropdown when active (Click-Based) */
 .theme-dropdown.active .theme-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Show dropdown on hover */
+.theme-dropdown:hover .theme-menu {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -138,7 +153,7 @@ body {
     padding: 12px;
     color: var(--text-color);
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
     text-align: center;
 }
 
@@ -188,5 +203,4 @@ body {
         cursor: pointer;
     }
 }
-
 
