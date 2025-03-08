@@ -192,27 +192,3 @@
     cursor: pointer;
 }
 
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
-    .upper-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .profile-section,
-    .about-me-section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .info-section {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .interests,
-    .education {
-        width: 100%;
-    }
-}
