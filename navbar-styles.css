@@ -174,23 +174,9 @@ body {
     bottom: 0;
     left: 0;
 }
-
 /* === HAMBURGER MENU BUTTON === */
 .hamburger {
-    display: none; /* Hide on larger screens */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 1500;
-}
-/* === HAMBURGER MENU BUTTON === */
-.hamburger {
-    display: none; /* Hide on larger screens */
+    display: none; /* Hidden on larger screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -213,43 +199,47 @@ body {
 
 /* === MOBILE NAVIGATION MENU === */
 @media (max-width: 768px) {
-    /* Display the hamburger button */
+    /* Show hamburger on mobile */
     .hamburger {
         display: flex;
     }
 
-    /* Adjust the navbar to align content properly */
+    /* Ensure navbar stays row-based */
     .navbar {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 15px 20px;
-        position: relative;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: var(--navbar-color);
+        box-shadow: 0 2px 10px var(--border-color);
+        z-index: 1000;
     }
 
-    /* Navigation links start as hidden */
+    /* Navigation menu styles */
     .nav-links {
         flex-direction: column;
-        display: none;
+        display: none; /* Initially hidden */
         position: absolute;
-        top: 50px; /* Below the hamburger */
+        top: 100%; /* Ensures it appears directly below the navbar */
         left: 0;
         width: 100%;
         background: var(--navbar-color);
         padding: 10px 0;
         box-shadow: 0px 4px 10px var(--border-color);
+        z-index: 999;
     }
 
-    /* Show the menu when active */
+    /* Show menu when active */
     .nav-links.active {
         display: flex;
-        position: absolute;
-        top: 50px; /* Directly below hamburger */
-        left: 0;
-        width: 100%;
     }
 
-    /* Align menu items to the left */
+    /* Style navigation items */
     .nav-links li {
         width: 100%;
         text-align: left;
