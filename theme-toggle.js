@@ -30,17 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("theme", theme);
     }
 
-    // Load saved theme or use auto (based on time)
+    // Load saved theme or use auto mode (based on time)
     const savedTheme = localStorage.getItem("theme") || "auto";
     applyTheme(savedTheme);
 
     // Open/Close Theme Dropdown on Button Click
-    themeButton.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevents the click from closing instantly
-        themeDropdown.classList.toggle("active");
-    });
+    if (themeButton) {
+        themeButton.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevents the click from closing instantly
+            themeDropdown.classList.toggle("active");
+        });
+    }
 
-    // Close dropdown when clicking outside of it
+    // Close dropdown when clicking outside
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".theme-dropdown")) {
             themeDropdown.classList.remove("active");
@@ -76,3 +78,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
