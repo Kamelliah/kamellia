@@ -19,13 +19,11 @@
     box-shadow: 0 4px 6px var(--border-color);
 }
 
-/* Flexbox Layout for Contact Section */
-/* 🔹 Ensure Contact Form & Right Section are Closer */
 .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px; /* Reduced gap from 40px */
+    gap: 10px; /* Reduced from 20px */
 }
 
 /* Contact Form - Align Left */
