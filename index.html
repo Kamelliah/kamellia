@@ -13,29 +13,42 @@
 </head>
 
 <body> 
-    
-    <!-- 🔹 Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-title">Kamellia Hyacinth</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-        </ul>
+     <!-- 🔹 Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar-title">Kamellia Hyacinth</div>
 
-        <!-- Mobile Menu -->
-        <button class="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-        </ul>
+    <!-- 🔹 Hamburger Menu Button (Mobile) -->
+    <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <!-- 🔹 Navigation Links (Used for both Desktop & Mobile) -->
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+    </ul>
+
+    <!-- 🔹 Right Section: Search & Theme Dropdown -->
+    <div class="nav-right">
+        <div class="search-container">
+            <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+        <div class="theme-dropdown">
+            <button class="theme-button"><i class="fa-solid fa-moon"></i></button>
+            <div class="theme-menu">
+                <div class="theme-option" data-theme="light">☀️ Light Mode</div>
+                <div class="theme-option" data-theme="auto">🔄 Auto Mode</div>
+                <div class="theme-option" data-theme="dark">🌑 Dark Mode</div>
+            </div>
+        </div>
+    </div>
+</nav>
 
         <!-- Right Section: Search + Theme Dropdown -->
         <div class="nav-right">
