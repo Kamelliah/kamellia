@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (theme === "dark") {
             document.body.classList.add("dark-theme");
         } else if (theme === "auto") {
-            const systemTheme = getSystemTimeBasedTheme();
-            if (systemTheme === "dark") {
+            if (getSystemTimeBasedTheme() === "dark") {
                 document.body.classList.add("dark-theme");
             }
         }
@@ -30,16 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Load saved theme or use auto mode
-    const savedTheme = localStorage.getItem("theme") || "auto";
-    applyTheme(savedTheme);
+    applyTheme(localStorage.getItem("theme") || "auto");
 
     // Open Theme Dropdown on Click
-    if (themeButton) {
-        themeButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevents the click from closing instantly
-            themeDropdown.classList.toggle("active");
-        });
-    }
+    themeButton?.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevents the click from closing instantly
+        themeDropdown.classList.toggle("active");
+    });
 
     // Close dropdown when clicking outside
     document.addEventListener("click", (e) => {
@@ -51,18 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Apply selected theme from dropdown
     themeOptions.forEach(option => {
         option.addEventListener("click", () => {
-            const selectedTheme = option.getAttribute("data-theme");
-            applyTheme(selectedTheme);
+            applyTheme(option.getAttribute("data-theme"));
             themeDropdown.classList.remove("active"); // Close menu after selection
         });
     });
 
-    // Automatically update theme every 60 seconds in case time changes
+    // Automatically update theme every 60 seconds
     setInterval(() => {
         if (localStorage.getItem("theme") === "auto") {
             applyTheme("auto");
         }
-    }, 60000); // Check every 60 seconds
+    }, 60000);
 
     /** =========================
      *  🔹 MOBILE NAVBAR FUNCTIONALITY
@@ -71,17 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener("click", function () {
+        hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
             hamburger.classList.toggle("active"); // Toggle animation on hamburger
         });
 
         // Close menu when clicking a link
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
+        navLinks.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") {
                 navLinks.classList.remove("active");
-                hamburger.classList.remove("active"); // Remove animation when menu closes
-            });
+                hamburger.classList.remove("active");
+            }
         });
     }
 });
