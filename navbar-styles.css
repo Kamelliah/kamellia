@@ -113,8 +113,7 @@ body {
 .search-icon:hover {
     opacity: 0.7;
 }
-
-/* === Theme Dropdown Styles === */
+/* === Theme Dropdown Styles (Fixed) === */
 .theme-dropdown {
     position: relative;
     display: inline-block;
@@ -135,7 +134,7 @@ body {
     background: var(--hover-color);
 }
 
-/* Hide the dropdown by default */
+/* Hide dropdown by default */
 .theme-menu {
     display: none;
     position: absolute;
@@ -160,9 +159,11 @@ body {
     color: white;
 }
 
-/* Show the dropdown when the parent is active */
+/* Show dropdown when active */
 .theme-dropdown.active .theme-menu {
     display: block;
+}
+
 }
 
 /* === BUTTON STYLES === */
