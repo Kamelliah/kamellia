@@ -1,48 +1,78 @@
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.main-content {
     background: white;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.sidebar {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
     text-align: center;
-    color: #333;
+    color: #004aad;
+    font-weight: 600;
 }
 
+/* Featured Announcements */
 .featured {
-    background: #0073e6;
+    background: linear-gradient(90deg, #004aad, #0073e6);
     color: white;
     padding: 15px;
     text-align: center;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Countdown Timer Section */
+.countdown-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin-bottom: 20px;
 }
 
 #countdown {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    color: #004aad;
 }
 
 .countdown-box {
     background: #0073e6;
     color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 10px;
     font-size: 20px;
+    font-weight: bold;
     animation: pulse 1.5s infinite alternate;
 }
 
@@ -51,44 +81,99 @@ h1, h2 {
     to { transform: scale(1.1); }
 }
 
+/* Timeline Section */
 .timeline {
-    border-left: 3px solid #0073e6;
+    border-left: 4px solid #0073e6;
     padding-left: 20px;
     margin-left: 20px;
 }
 
 .timeline-item {
     margin-bottom: 20px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .timeline-item:hover {
     background: #e3f2fd;
-    padding: 5px;
-    border-radius: 5px;
+    transform: translateX(5px);
 }
 
+/* News Section */
 .news-section {
     margin-top: 30px;
 }
 
 .news-item {
-    background: #f9f9f9;
+    background: white;
     padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
     border-left: 5px solid #0073e6;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item:hover {
+    background: #f1faff;
 }
 
 .news-content {
     display: none;
+    padding-top: 10px;
 }
 
-.sidebar {
-    background: #f1f1f1;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 30px;
-    display: none;
+/* Sidebar Enhancements */
+.sidebar-section {
+    margin-bottom: 20px;
 }
+
+.sidebar-section h3 {
+    color: #004aad;
+    font-weight: 600;
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .main-content {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .featured {
+    background: linear-gradient(90deg, #00308F, #0056b3);
+}
+
+.dark-mode .news-item {
+    background: #232323;
+    color: white;
+    border-left: 5px solid #0056b3;
+}
+
+.dark-mode .timeline-item:hover {
+    background: #1c1c1c;
+}
+
+.dark-mode .countdown-container {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode #countdown {
+    color: #ffffff;
+}
+
+.dark-mode .countdown-box {
+    background: #0056b3;
+}
+
