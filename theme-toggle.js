@@ -64,18 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 60000); // Check every 60 seconds
 
-
     /** =========================
-     *  🔹 MOBILE NAVBAR FUNCTIONALITY
-     *  ========================= */
+ *  🔹 MOBILE NAVBAR FUNCTIONALITY
+ *  ========================= */
+document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
-    if (hamburger) {
-        hamburger.addEventListener("click", () => {
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", function () {
             navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active"); // Toggle animation on hamburger
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active"); // Remove animation when menu closes
+            });
         });
     }
 });
 
-
+    
