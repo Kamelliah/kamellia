@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 5px; /* Reduced from 20px */
+    gap: 10px; /* Reduce even more */
 }
 
 /* Contact Form - Align Left */
@@ -43,9 +43,10 @@
     text-align: center;
 }
 .contact-form p {
-    margin-bottom: 20px; /* Slightly increase spacing */
-    padding-bottom: 5px; /* Add a bit more space */
+    margin-bottom: 25px; /* Increase space slightly */
+    padding-bottom: 8px;
     display: block;
+
 }
 
 .contact-form .form-group:first-of-type {
