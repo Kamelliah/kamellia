@@ -33,19 +33,20 @@ a {
 }
 
 #countdown {
-    max-width: 700px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-#countdown {
     max-width: 600px;
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#countdown ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
 }
 
 #countdown ul li {
@@ -69,21 +70,29 @@ a {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
 }
-/* Interactive Sections */
-.collapsible {
-    background: rgba(0, 0, 0, 0.8);
-    border: none;
-    color: #00d4ff;
-    cursor: pointer;
-    padding: 10px;
+
+/* Three-Column Layout Under Countdown */
+.three-column-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 900px;
     width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    border-radius: 8px;
-    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.collapsible:hover {
+.three-column-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #00d4ff;
+    box-shadow: 0px 4px 8px rgba(0, 174, 255, 0.4);
+}
+
+.three-column-box:hover {
     background: rgba(0, 0, 0, 1);
 }
 
@@ -92,7 +101,7 @@ a {
     padding: 10px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin-top: 5px;
     font-size: 0.9rem;
 }
 
