@@ -49,10 +49,12 @@
 }
 
 .contact-form p {
-    margin-bottom: 25px;
-    padding-bottom: 8px;
-    display: block;
+    font-size: 14px; /* Reduce font size */
+    margin-bottom: 15px; /* Adjust spacing */
+    padding-bottom: 5px;
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
 }
+
 
 /* Space Above "Full Name" */
 .contact-form .form-group:first-of-type {
@@ -144,6 +146,12 @@ input, textarea, select {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.location-text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px; /* Adds space before the map */
 }
 
 .map-container {
