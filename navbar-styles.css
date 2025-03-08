@@ -175,9 +175,22 @@ body {
     left: 0;
 }
 
-/* === HAMBURGER MENU STYLING === */
+/* === HAMBURGER MENU BUTTON === */
 .hamburger {
-    display: none; /* Hidden by default on desktop */
+    display: none; /* Hide on larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+}
+/* === HAMBURGER MENU BUTTON === */
+.hamburger {
+    display: none; /* Hide on larger screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -200,34 +213,40 @@ body {
 
 /* === MOBILE NAVIGATION MENU === */
 @media (max-width: 768px) {
-    /* Show hamburger button */
+    /* Display the hamburger button */
     .hamburger {
         display: flex;
     }
 
-    /* Adjust navbar for mobile */
+    /* Adjust the navbar to align content properly */
     .navbar {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 15px 20px;
+        position: relative;
     }
 
-    /* Mobile menu styles */
+    /* Navigation links start as hidden */
     .nav-links {
         flex-direction: column;
+        display: none;
         position: absolute;
-        top: 60px; /* Below the navbar */
+        top: 50px; /* Below the hamburger */
         left: 0;
         width: 100%;
         background: var(--navbar-color);
-        display: none;
         padding: 10px 0;
         box-shadow: 0px 4px 10px var(--border-color);
     }
 
-    /* Make the menu visible when active */
+    /* Show the menu when active */
     .nav-links.active {
         display: flex;
+        position: absolute;
+        top: 50px; /* Directly below hamburger */
+        left: 0;
+        width: 100%;
     }
 
     /* Align menu items to the left */
@@ -235,6 +254,7 @@ body {
         width: 100%;
         text-align: left;
         padding: 10px 20px;
+        list-style: none;
     }
 
     .nav-links a {
@@ -242,7 +262,7 @@ body {
         width: 100%;
         text-align: left;
         font-size: 18px;
-        padding: 10px;
+        padding: 12px 20px;
         color: var(--text-color);
         text-decoration: none;
         transition: background 0.3s;
