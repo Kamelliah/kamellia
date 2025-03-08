@@ -79,7 +79,6 @@ body {
     gap: 15px;
 }
 
-
 /* === SEARCH CONTAINER === */
 .search-container {
     display: flex;
@@ -168,25 +167,31 @@ body {
     color: white;
 }
 
-/* === FOOTER STYLES === */
-.footer {
-    background: var(--navbar-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 15px 30px;
-    box-shadow: 0 -2px 10px var(--border-color);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
 /* === MOBILE STYLES === */
 @media (max-width: 768px) {
-    /* 🔹 Center Title on Mobile */
+    /* 🔹 Align hamburger to the left */
+    .hamburger {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1500;
+    }
+
+    /* 🔹 Center the title in mobile */
     .navbar-title {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        white-space: nowrap;
     }
 
     /* 🔹 Right Section: Search & Theme on the Right */
@@ -201,9 +206,9 @@ body {
         flex-direction: column;
         display: none;
         position: absolute;
-        top: 100%;
+        top: 60px; /* Adjusted so it appears below the navbar */
         left: 0;
-        width: 250px;
+        width: 100%;
         background: var(--navbar-color);
         padding: 10px 0;
         box-shadow: 2px 4px 10px var(--border-color);
@@ -238,20 +243,6 @@ body {
         background: var(--hover-color);
         color: white;
     }
-
-    /* 🔹 Show hamburger menu */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 25px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 1500;
-    }
 }
 
 /* === HAMBURGER ANIMATION (X Toggle) === */
@@ -265,4 +256,17 @@ body {
 
 .hamburger.active div:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === FOOTER STYLES === */
+.footer {
+    background: var(--navbar-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 30px;
+    box-shadow: 0 -2px 10px var(--border-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
