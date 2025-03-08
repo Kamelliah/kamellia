@@ -1,19 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /** =========================
-     *  🔹 NAVBAR LOADING FUNCTIONALITY
-     *  ========================= */
+    // Load navbar dynamically
     fetch("navbar.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("navbar-container").innerHTML = data;
-
-            // Highlight active link in navbar
-            const links = document.querySelectorAll(".nav-links a");
-            links.forEach(link => {
-                if (link.href === window.location.href) {
-                    link.classList.add("active");
-                }
-            });
         })
         .catch(error => console.error("Error loading navbar:", error));
 
@@ -25,13 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeMenu = document.querySelector(".theme-menu");
     const themeOptions = document.querySelectorAll(".theme-option");
 
-    // Function to check system time for auto mode (Light: 6AM-5:59PM | Dark: 6PM-5:59AM)
     function getSystemTimeBasedTheme() {
         const currentHour = new Date().getHours();
         return (currentHour >= 6 && currentHour < 18) ? "light" : "dark";
     }
 
-    // Function to apply selected theme
     function applyTheme(theme) {
         document.body.classList.remove("dark-theme");
 
@@ -44,56 +32,48 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Save the selected theme in local storage
         localStorage.setItem("theme", theme);
     }
 
-    // Load saved theme or use auto mode (based on time)
     const savedTheme = localStorage.getItem("theme") || "auto";
     applyTheme(savedTheme);
 
-    // Open/Close Theme Dropdown on Button Click
     if (themeButton) {
         themeButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevents the click from closing instantly
+            e.stopPropagation();
             themeDropdown.classList.toggle("active");
         });
     }
 
-    // Close dropdown when clicking outside
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".theme-dropdown")) {
             themeDropdown.classList.remove("active");
         }
     });
 
-    // Apply selected theme from dropdown
     themeOptions.forEach(option => {
         option.addEventListener("click", () => {
             const selectedTheme = option.getAttribute("data-theme");
             applyTheme(selectedTheme);
-            themeDropdown.classList.remove("active"); // Close menu after selection
+            themeDropdown.classList.remove("active");
         });
     });
 
-    // Automatically update theme every 60 seconds in case time changes
     setInterval(() => {
         if (localStorage.getItem("theme") === "auto") {
             applyTheme("auto");
         }
-    }, 60000); // Check every 60 seconds
+    }, 60000);
 
     /** =========================
      *  🔹 NAVBAR FUNCTIONALITY (Mobile Menu)
      *  ========================= */
-    document.addEventListener("click", function (e) {
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-        if (hamburger && navLinks && e.target === hamburger) {
+    if (hamburger) {
+        hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
-        }
-    });
+        });
+    }
 });
-
-
