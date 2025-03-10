@@ -6,7 +6,7 @@ title: "Kamellia Hyacinth"
 date: 2022-10-24
 type: landing
 theme: "hugoblox"
-baseURL: "https://kamelliah.github.io"
+baseURL: "https://kamelliah.github.io/"
 
 # Page Sections
 sections:
