@@ -17,12 +17,12 @@ sections:
       text: "Healthcare administration professional with a strong foundation in public health, health IT. Passionate about healthcare policy, operations, and technology-driven solutions to improve efficiency and patient outcomes. Focused on epidemiology, health advocacy, and regulatory compliance, with a keen interest in data-driven decision-making and healthcare innovation. Background in military leadership fosters discipline, strategic thinking, and adaptability in dynamic healthcare environments. Dedicated to leveraging technology, policy, and operational strategies to contribute to healthcare transformation and public health initiatives."
       button:
         text: "Download my Résumé"
-        url: "https://github.com/Kamelliah/Kamellia/blob/main/static/uploads/Kamellia_Hyacinth_Resume.pdf"
+        url: "uploads/resume.pdf"
       profile:
         name: "Kamellia Hyacinth"
         subtitle: "MS-HCA Student"
         organization: "University of Wisconsin La Crosse"
-        image: "https://github.com/Kamelliah/Kamellia/blob/main/static/uploads/IMG_4424.jpeg"
+        image: "uploads/profile.jpg"
       interests:
         - "Healthcare Policy & Advocacy"
         - "Public Health & Community Wellness"
@@ -71,31 +71,6 @@ sections:
         spacing:
           padding: [0, 0, 0, 0]
   
-  - block: resume-experience
-    content:
-      title: "Experience"
-      username: admin
-    design:
-      date_format: 'January 2006'
-      is_education_first: false
-
-  - block: resume-skills
-    content:
-      title: "Skills & Hobbies"
-      username: admin
-    design:
-      show_skill_percentage: false
-
-  - block: resume-awards
-    content:
-      title: "Awards"
-      username: admin
-
-  - block: resume-languages
-    content:
-      title: "Languages"
-      username: admin
-
   - block: contact
     id: contact
     content:
@@ -104,8 +79,9 @@ sections:
       email: "kamelliahyacinth@gmail.com"
       phone: "608-571-8876"
       social:
-        twitter: "https://twitter.com/kamelliahyacinth"
+        Zoom: ""
         linkedin: "https://linkedin.com/in/kamelliahyacinth"
     design:
       view: simple
 ---
+
