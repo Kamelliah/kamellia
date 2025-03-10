@@ -1,125 +1,111 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ""
+# Homepage settings for Kamellia Hyacinth
+
+# Site Title and Configuration
+title: "Kamellia Hyacinth"
 date: 2022-10-24
 type: landing
+theme: "hugoblox"
+baseURL: "https://kamellia.github.io/"
 
-design:
-  # Default section spacing
-  spacing: "6rem"
-
+# Page Sections
 sections:
-  - block: resume-biography-3
+  - block: about.biography
+    id: about
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
+      title: "About Me"
+      text: "Healthcare administration professional with a strong foundation in public health, health IT. Passionate about healthcare policy, operations, and technology-driven solutions to improve efficiency and patient outcomes. Focused on epidemiology, health advocacy, and regulatory compliance, with a keen interest in data-driven decision-making and healthcare innovation. Background in military leadership fosters discipline, strategic thinking, and adaptability in dynamic healthcare environments. Dedicated to leveraging technology, policy, and operational strategies to contribute to healthcare transformation and public health initiatives."
       button:
-        text: Download CV
-        url: uploads/resume.pdf
-    design:
-      css_class: dark
-      background:
-        color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        text: "Download my Résumé"
+        url: "https://github.com/Kamelliah/Kamellia/blob/main/static/uploads/Kamellia_Hyacinth_Resume.pdf"
+      profile:
+        name: "Kamellia Hyacinth"
+        subtitle: "MS-HCA Student"
+        organization: "University of Wisconsin La Crosse"
+        image: "https://github.com/Kamelliah/Kamellia/blob/main/static/uploads/IMG_4424.jpeg"
+      interests:
+        - "Healthcare Policy & Advocacy"
+        - "Public Health & Community Wellness"
+        - "Patient-Centered Care"
+        - "Healthcare Data Analytics"
+        - "Strategic Planning & Leadership"
+        - "Population Health Management"
+      education:
+        - degree: "M.Sc., Public Health - 2027"
+          institution: "University of Wisconsin Madison"
+        - degree: "M.Sc., Healthcare Administration - 2025"
+          institution: "University of Wisconsin La Crosse"
+        - degree: "B.Sc., Information Technology - 2015"
+          institution: "St. George’s University"
+      social:
+        linkedin: "https://linkedin.com/in/kamelliahyacinth"
+        email: "kamelliahyacinth@gmail.com"
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
   - block: collection
-    id: papers
+    id: portfolio
     content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
+      title: "Portfolio"
+      text: "Projects and work samples will be added here."
     design:
       view: article-grid
       columns: 2
+
   - block: collection
+    id: gallery
     content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
+      title: "Gallery"
+      text: "Images will be added later."
     design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      view: article-grid
-      columns: 1
+      view: gallery
+      columns: 2
+
   - block: collection
     id: news
     content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
+      title: "News & Updates"
+      text: "Latest blog posts and updates go here."
       filters:
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: date-title-summary
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
+        page_type: post
+      design:
+        view: date-title-summary
+        spacing:
+          padding: [0, 0, 0, 0]
+  
+  - block: resume-experience
     content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-        
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+      title: "Experience"
+      username: admin
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-700"
-        css_style: ""
+      date_format: 'January 2006'
+      is_education_first: false
+
+  - block: resume-skills
+    content:
+      title: "Skills & Hobbies"
+      username: admin
+    design:
+      show_skill_percentage: false
+
+  - block: resume-awards
+    content:
+      title: "Awards"
+      username: admin
+
+  - block: resume-languages
+    content:
+      title: "Languages"
+      username: admin
+
+  - block: contact
+    id: contact
+    content:
+      title: "Contact Me"
+      text: "Get in touch through this section."
+      email: "kamelliahyacinth@gmail.com"
+      phone: "608-571-8876"
+      social:
+        twitter: "https://twitter.com/kamelliahyacinth"
+        linkedin: "https://linkedin.com/in/kamelliahyacinth"
+    design:
+      view: simple
 ---
