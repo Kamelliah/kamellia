@@ -6,7 +6,7 @@ title: "Kamellia Hyacinth"
 date: 2022-10-24
 type: landing
 theme: "hugoblox"
-baseURL: "https://kamellia.github.io/"
+baseURL: "https://kamelliah.github.io/Kamellia/"
 
 # Page Sections
 sections:
@@ -23,6 +23,12 @@ sections:
         subtitle: "MS-HCA Student"
         organization: "University of Wisconsin La Crosse"
         image: "uploads/profile.jpg"
+      social:
+        email: "kamelliahyacinth@gmail.com"
+        linkedin: "https://linkedin.com/in/kamelliahyacinth"
+        Calendly: "https://calendly.com/kamelliahyacinth"
+        Zoom: "https://us04web.zoom.us/meeting/schedule"
+        cv: "uploads/resume.pdf"
       interests:
         - "Healthcare Policy & Advocacy"
         - "Public Health & Community Wellness"
@@ -37,9 +43,6 @@ sections:
           institution: "University of Wisconsin La Crosse"
         - degree: "B.Sc., Information Technology - 2015"
           institution: "St. George’s University"
-      social:
-        linkedin: "https://linkedin.com/in/kamelliahyacinth"
-        email: "kamelliahyacinth@gmail.com"
 
   - block: collection
     id: portfolio
@@ -60,6 +63,18 @@ sections:
       columns: 2
 
   - block: collection
+    id: featured
+    content:
+      title: "Featured Publications"
+      filters:
+        folders:
+          - publication
+        featured_only: true
+    design:
+      columns: '2'
+      view: card
+
+  - block: collection
     id: news
     content:
       title: "News & Updates"
@@ -76,12 +91,12 @@ sections:
     content:
       title: "Contact Me"
       text: "Get in touch through this section."
-      email: "kamelliahyacinth@gmail.com"
-      phone: "608-571-8876"
+      email: "your-email@example.com"
+      phone: "Your phone number"
       social:
-        Zoom: ""
+        twitter: "https://twitter.com/kamelliahyacinth"
         linkedin: "https://linkedin.com/in/kamelliahyacinth"
+        github: "https://github.com/kamelliah"
     design:
       view: simple
 ---
-
