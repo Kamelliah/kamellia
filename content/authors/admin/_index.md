@@ -1,172 +1,164 @@
 ---
-# Display name
 title: Kamellia Hyacinth
 
-# Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
-
-# Full name (for SEO)
 first_name: Kamellia
 last_name: Hyacinth
 
-# Status emoji
 status:
   icon: ☕️
 
-# Is this the primary user of the site?
 superuser: true
 
-# Role/position/tagline
-role: MSHCA Student
+role: Public Health Policy, Systems & Compliance Professional
 
-# Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: University of Wisconsin - La Crosse
+  - name: University of Wisconsin–Milwaukee
+    url: https://uwm.edu/
+  - name: University of Wisconsin–La Crosse
     url: https://www.uwlax.edu/
 
-# Social network links
-# Need to use another icon? Simply download the SVG icon to your assets/media/icons/ folder.
 profiles:
   - icon: at-symbol
     url: 'mailto:kamelliahyacinth@gmail.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/github
-    url: https://github.com/gcushen
+    label: Email Me
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/kamellia
+    url: 'https://www.linkedin.com/in/kamellia'
+  - icon: brands/github
+    url: 'https://github.com/kamellia'
   - icon: brands/instagram
-    url: https://www.instagram.com/kamelliah
+    url: 'https://www.instagram.com/kamelliah'
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: Master of Public Health – Policy & Management
+    institution: University of Wisconsin–Milwaukee
+    date_start: 2024-08-01
+    date_end: 2027-05-01
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Proposal'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
+      MPH candidate focused on health policy, population health strategy, public health systems, and evidence-based decision-making.
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: Master of Healthcare Administration
+    institution: University of Wisconsin–La Crosse
+    date_start: 2023-08-01
+    date_end: 2025-05-01
     summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Completed MHA with academic focus in healthcare operations, quality management, compliance, and health law.
+
+  - area: Bachelor of Science – Information Technology
+    institution: St. George’s University
+    date_start: 2011-09-01
+    date_end: 2015-12-01
+    summary: |
+      Foundation in systems management, technical problem solving, and data-informed workflows.
+
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: Community Health & Policy Intern
+    company_name: Children’s Wisconsin
+    company_url: ''
+    company_logo: ''
+    date_start: 2026-06-01
+    date_end: 2026-08-21
+    summary: |2-
+      Key contributions:
+      - Conduct policy research and environmental scans supporting youth vaping prevention initiatives and school health policy development
+      - Support Community Health Needs Assessment (CHNA) implementation strategy initiatives focused on population health improvement and community benefit priorities
+      - Contribute to development, implementation, and evaluation of evidence-based community health programs addressing youth risk behaviors
+      - Collaborate with interdisciplinary healthcare and public health teams to support community outreach and prevention initiatives
+      - Assist with preparation of policy summaries, program documentation, and strategic materials supporting organizational community health priorities
+
+  - position: Audiology Clinical Operations Coordinator
+    company_name: SSM Health Dean Medical Group
+    company_url: ''
+    company_logo: ''
+    date_start: 2025-01-01
+    date_end: 2026-01-01
+    summary: |2-
+      Key contributions:
+      - Served as sole operations support for two audiology providers, independently managing daily clinic workflow, patient scheduling, and front-end coordination
+      - Managed inventory, supply ordering, and equipment readiness to support uninterrupted clinical operations
+      - Maintained Epic EHR documentation, prior authorizations, and insurance verification in alignment with compliance protocols
+
+  - position: CBRF Compliance & Policy Intern
+    company_name: Circle of Hope, Inc. II
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-05-01
+    date_end: 2025-05-01
+    summary: |2-
+      Key contributions:
+      - Produced a 36-page regulatory compliance policy manual aligned with Wisconsin Administrative Code DHS 83 and DHS 88
+      - Conducted regulatory gap analysis and translated findings into corrective action recommendations and implementation-ready policy documentation
+      - Standardized documentation across policy, HR, and operations to support licensing readiness and DQA survey inspection
+      - Coordinated compliance remediation timelines and cross-functional implementation progress tracking
+
+  - position: Petroleum Supply Specialist (MOS 92F)
+    company_name: U.S. Army
     company_url: ''
     company_logo: ''
     date_start: 2021-01-01
-    date_end: ''
+    date_end: 2024-12-01
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Key contributions:
+      - Managed fuel operations, petroleum quality surveillance, and inventory accountability across bulk storage and distribution points
+      - Maintained environmental compliance through HAZMAT handling and spill prevention procedures
+      - Coordinated mission-critical logistics and fuel resupply in high-accountability operational environments
 
-# Skills
-# Add your own SVG icons to assets/media/icons/
 skills:
-  - name: Technical Skills
+  - name: Policy & Compliance
     items:
-      - name: Python
+      - name: Regulatory interpretation
         description: ''
-        percent: 80
-        icon: devicon/python
-      - name: RStudio
+        percent: 90
+      - name: Policy analysis
         description: ''
-        percent: 100
-        icon: devicon/rstudio
-      - name: PyTorch
+        percent: 90
+      - name: Compliance documentation
         description: ''
-        percent: 40
-        icon: devicon/pytorch
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
+        percent: 95
+      - name: Regulatory gap analysis
+        description: ''
+        percent: 90
+
+  - name: Healthcare & Public Health
     items:
-      - name: Hiking
+      - name: Population health strategy
         description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
+        percent: 85
+      - name: Program evaluation
         description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
+        percent: 85
+      - name: Community health initiatives
         description: ''
-        percent: 80
-        icon: camera
+        percent: 85
+      - name: Health systems operations
+        description: ''
+        percent: 90
 
-languages:
-  - name: English
-    percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: Technical Tools
+    items:
+      - name: Epic EHR
+        description: ''
+        percent: 85
+      - name: Stata
+        description: ''
+        percent: 70
+      - name: SAS
+        description: ''
+        percent: 70
+      - name: Tableau
+        description: ''
+        percent: 70
+      - name: LaTeX / Overleaf
+        description: ''
+        percent: 90
 
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only title, awarder, and date are required.
-#   Begin multi-line summary with YAML's | or |2- multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
-    summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
-    summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+  - title: Basic Life Support Healthcare Provider (BLS HCP)
+    date: '2026-12-31'
+    awarder: American Heart Association
+
+  - title: Resuscitation Quality Improvement (RQI)
+    date: '2026-12-31'
+    awarder: American Heart Association
 ---
 
-I am currently Director of Cloud Infrastructure at GenCoin where I am leading teams on edge computing, deep sea data center architecture, and hivemind optimization.
+MPH candidate with a completed MHA and cross-sector experience spanning healthcare operations, compliance policy, military logistics, and population health strategy. My work focuses on translating complex regulatory requirements into operational policy and supporting healthcare systems improvement through evidence-based, systems-level thinking.
